@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image"
+        content="https://i.imgur.com/XUU8yb7.png">
+    <meta property="og:title" content="주호와 예인이에 크리스마스 카드">
+    <meta property="og:description" content="행복하고 따듯한 크리스마스 보내세요!">
+    <link rel="shortcut icon"
+        href="https://i.imgur.com/6lk8ehB.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/xmas/snow.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+    <title>2020년을 보내며</title>
+    <style>
+        * {
+            font-family: 'Stylish', sans-serif;
+        }
+
+        body {
+            background-color: #9b070f;
+        }
+
+        .envelope {
+            width: 300px;
+            height: 300px;
+            background-image: url('https://pngimg.com/uploads/envelope/envelope_PNG18366.png');
+            background-size: cover;
+            background-position: center;
+            margin: 200px auto 0px auto;
+            cursor: pointer;
+        }
+
+        .envelope-msg {
+            color: white;
+            text-align: center;
+        }
+
+        .letter-open {
+            display: none;
+        }
+
+        .image {
+            width: 200px;
+            height: 200px;
+            background-image:
+                url('https://i.imgur.com/ePewfJU.gif');
+            background-size: cover;
+            background-position: center;
+            background-color: white;
+            margin: 100px auto 0px auto;
+            border-radius: 100px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px 2px white;
+        }
+
+        .title {
+            color: white;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .messagebox {
+            background-color: ivory;
+            width: 400px;
+            margin: auto;
+            color: brown;
+            padding: 30px;
+            font-size: 20px;
+            line-height: 30px;
+            border: 5px solid white;
+            box-shadow: 0px 0px 10px 2px white;
+        }
+
+        .from {
+            text-align: right;
+            margin-bottom: 0px;
+        }
+
+        .bible {
+            text-align: right;
+            margin-top: 0px;
+        }
+
+        @media screen and (max-width: 760px) {
+            .messagebox {
+                width: 300px;
+                padding: 20px;
+            }
+
+            .image {
+                width: 190px;
+                height: 190px;
+                margin: 70px auto 0px auto;
+            }
+
+            .title {
+                font-size: 30px;
+            }
+
+            .envelope {
+                margin: 150px auto 0px auto;
+            }
+            .from {
+                font-size: 17px;
+            }
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $(".envelope").click(function () {
+                $('.letter-close').fadeOut(function () {
+                    window.setTimeout(function () {
+                        $('.letter-open').fadeIn(2000);
+                    }, 300);
+                });
+            });
+        });
+
+        function go_image() {
+            alert("신혼커플 :)")
+            window.location.href=""
+        }
+
+        // function open_letter() {
+        //     document.getElementsByClassName("letter-close")[0].style.display = 'none'
+        //     document.getElementsByClassName("letter-open")[0].style.display = 'block'
+        // }
+    </script>
+</head>
+
+<body>
+    <div class="letter-close">
+        <div class="envelope"></div>
+        <h2 class="envelope-msg">봉투를 클릭해주세요!</h2>
+    </div>
+    <div class="letter-open">
+        <div class="image" onclick="go_image()"></div>
+        <h1 class="title">Merry Christmas <br />
+        Happy New Year
+        </h1>
+        <div class="messagebox">
+            우리가 환난 중에도 즐거워하나니 이는 환난은 인내를 인내는 연단을, 연단은 소망을 이루는 줄 앎이로다.
+            <br /> 
+            <p class="bible">(롬 5:3-4)</p>
+            2020년 힘들고 어려웠던 고난의 때를 잘 견뎌오신 그대를 칭찬합니다.
+            그 고난 중에 우리는 좀 더 단단해졌을 거란 생각이 드네요.
+            이제 맞을 2021년은 우리의 소망을 이루는 한해 되시기를 응원합니다.
+            <p class="from">
+                12.25.2020 <br />
+                김주호, 권예인 드림
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
